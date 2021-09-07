@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #username{
+            display: none;
+        }
+        #password{
+            display: none;
+        }
+        h1{
+            color: blue;
+        }
+        h3{
+            color:green;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            border: 2px solid black;
+            overflow-y: scroll;
+        }
+        #message{
+            width: 100%;
+            border:1px solid blue;
+            font-size: 16px;
+        }
+        button{
+            width: 100%;
+            background-color:green;
+            color:white;
+            font-size: 24px;
+            appearance:initial;
+        }
+        strong{
+            color: lime;
+        }
+    </style>
+</head>
+<body>
+    <h1> Hush Kelibsiz <strong>{{name}}</strong></h1>
+    <hr>
+    <div class="content">
+        <div>
+
+    
+        <div class="container">
+            <div>
+                {{#each messages}}
+                    {{#author}}<h3>{{this.username}}</h3>{{/author}}
+                    {{message}}
+                {{/each}}
+            </div>
+          
+        </div>
+        <br>
+        <form action="/messages" method="get">
+            <input type="text" name="username" id="username" value="{{name}}">
+            <input type="password" name="password" id="password" value="{{pass}}">
+            <input type="text" name="message" id="message">
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+    
+    
+   
+</body>
+</html>
