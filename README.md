@@ -1,9 +1,7 @@
-��#� �n�o�d�e�c�h�a�t�
-�
-�
+## Bu shunchaki urganish
 - Salom Bu node Chat project
   - `Raxmat etibor uxhun`
-``
+```
   node project 
-``
+```
  
